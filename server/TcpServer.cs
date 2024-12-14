@@ -23,13 +23,13 @@ class TcpToMqttBridge
         var mqttClient = mqttFactory.CreateMqttClient();
 
         var mqttOptions = new MqttClientOptionsBuilder()
-            .WithTcpServer("904ac42f358b47e7a596aa6d2970ed7c.s1.eu.hivemq.cloud", 8883)
+            .WithTcpServer("broker_url", 8883)
             .WithTls(new MqttClientOptionsBuilderTlsParameters
             {
                 UseTls = true,
                 SslProtocol = SslProtocols.Tls12
             })
-            .WithCredentials("alanjohn", "alan123John") // Add your HiveMQ Cloud credentials
+            .WithCredentials("your_username", "password") // Add your HiveMQ Cloud credentials
             .WithClientId($"TcpToMqttClient_{Guid.NewGuid()}") // Unique client ID
             .Build();
 

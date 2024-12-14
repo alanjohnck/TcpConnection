@@ -10,7 +10,7 @@ class TcpClientExample
     {
         string serverIp = "127.0.0.1";   // TCP server IP address
         int serverPort = 5000;
-        int i = 1;        // TCP server port
+        int i = 1;       
         try
         {
             // Initialize HttpClient to fetch data from API
